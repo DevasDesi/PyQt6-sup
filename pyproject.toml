@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shoes-exam"
+version = "1.0.0"
+description = "Демонстрационный экзамен 09.02.07 — магазин обуви (PyQt6 + PyMySQL)"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Student", email = "student@college.ru"}
+]
+requires-python = ">=3.10"
+dependencies = [
+    "PyQt6>=6.4",
+    "PyMySQL>=1.0",
+]
+
+[project.scripts]
+shoes-exam = "shoes_exam.main:main"
+
+[project.urls]
+Homepage = "https://github.com/YOUR_USERNAME/shoes-exam"
+Repository = "https://github.com/YOUR_USERNAME/shoes-exam"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["shoes_exam*"]
+
+[tool.setuptools.package-data]
+shoes_exam = ["ui/*.ui", "resources/*"]

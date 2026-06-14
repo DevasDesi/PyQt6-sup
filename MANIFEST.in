@@ -1,0 +1,3 @@
+include README.md
+recursive-include shoes_exam/ui *.ui
+recursive-include shoes_exam/resources *
